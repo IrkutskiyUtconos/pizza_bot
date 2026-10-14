@@ -150,7 +150,7 @@ theme: /
             $session.lastOrder = orderSummary($session);
             $session.orderId = Math.floor(1000 + Math.random() * 9000);
             $reactions.answer("Заказ №" + $session.orderId + " принят! Готовим, курьер будет примерно через 40 минут.");
-        image: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0l/Te_gusta_la_Pizza%3F.jpg/960px-Te_gusta_la_Pizza%3F.jpg
+        image: https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800
         script:
             resetOrder($session);
         a: Чтобы заказать ещё, скажите «хочу пиццу» или нажмите /start.
