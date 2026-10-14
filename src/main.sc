@@ -149,7 +149,7 @@ theme: /
             $session.lastOrder = orderSummary($session);
             $session.orderId = Math.floor(1000 + Math.random() * 9000);
             $reactions.answer("Заказ №" + $session.orderId + " принят! Готовим, курьер будет примерно через 40 минут.");
-        image: https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800
+        image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAbXobSg3InPbRe-NC5bFQRbnM_7sFg6j4CP5V9M4bXJW7ZFCE1oHbJBj4W93ng49gaH_Xsx0&s=10
         script:
             resetOrder($session);
         a: Чтобы заказать ещё, скажите «хочу пиццу» или нажмите /start.
