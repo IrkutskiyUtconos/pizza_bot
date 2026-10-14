@@ -1,4 +1,4 @@
 theme: /
-state: Start
-    q!: $regex</start>
-    a: Привет!
+    state: Start
+        q!: $regex</start>
+        a: Привет!
