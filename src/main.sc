@@ -138,10 +138,25 @@ theme: /
                 "Поменять размер"
                 "Поменять основу"
                 "Поменять адрес"
-    
+
+        state: ConfirmChange
+            intent: /Изменить 
+            script:
+                if (changeParam($session, $parseTree, $reactions)) {
+                    $reactions.transition("/Check");
+                } else {
+                    # Если не поняли, что именно менять, спрашиваем
+                    $reactions.answer("Что именно вы хотите изменить?");
+                    $reactions.buttons(["Поменять пиццу", "Поменять размер", "Поменять адрес"]);
+                }
+
         state: ConfirmNoMatch
             event: noMatch
-            a: Ответьте, пожалуйста, «да» или «нет».
+            a: Пожалуйста, ответьте «Да» для оформления или выберите действие.
+            buttons:
+                "Да"
+                "Поменять размер"
+                "Поменять адрес"
             go!: /Confirm
     
     state: Done
